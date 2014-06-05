@@ -1,0 +1,18 @@
+<% content_for(:head) do %>
+  <script>
+    $(document).on('click', '#p4ssw0rd', function() {
+      alert('OK, we geven het toe, het is niet ZO gemakkelijk...');
+      return false;
+    })
+  </script>
+<% end %>
+
+<h1><%= t('.title') %></h1>
+
+<p><%= t('.explanation_html', password: @password) %></p>
+
+<%= form_tag do %>
+  <%= password_field_tag("p4ssw0rd", "of is dit het?", readonly: true, id: 'p4ssw0rd') %>
+
+  <%= submit_tag t('.hack') %>
+<% end %>

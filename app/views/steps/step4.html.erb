@@ -1,0 +1,11 @@
+<script>
+  $(document).on('submit', 'form', function () { return false; })
+</script>
+
+<h1><%= t('.title') %></h1>
+
+<p><%= t('.explanation_html') %></p>
+
+<%= form_tag do %>
+  <%= password_field_tag("passw0rd", @password, id: 'p4ssw0rd') %>
+<% end %>

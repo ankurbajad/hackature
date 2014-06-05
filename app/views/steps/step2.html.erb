@@ -1,0 +1,17 @@
+<h1><%= t('.title') %></h1>
+
+<p><%= t('.explanation_html') %></p>
+
+<%= form_tag do %>
+  <%= password_field_tag("passw0rd", "", id: 'p4ssw0rd') %>
+
+  <%= submit_tag t('.hack'), disabled: true, id: 'submit' %>
+<% end %>
+<%= (" " * 600 + "\n") * 20 %>
+<!-- WTF!! Wat is dit lang... -->
+<%= (" " * 600 + "\n") * 20 %>
+<!-- EINDE! -->
+<%= (" " * 600 + "\n") * 20 %>
+<!-- This is not the scrolling you are looking for -->
+<%= (" " * 600 + "\n") * 20 %>
+<script>$(document).on('change', '#p4ssw0rd', function () { if ($(this).val() == "<%= @password %>") { $('#submit').attr('disabled', false)} })</script>

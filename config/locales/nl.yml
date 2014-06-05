@@ -1,0 +1,36 @@
+nl:
+  steps:
+    step1:
+      title: "De Hackature"
+      explanation_html: |
+        Hier begint de Hackature. Om je een duwtje in de rug te geven heb je hier meteen het paswoord dat je nodig hebt
+        om naar de volgende stap te gaan! Het paswoord is <em>%{password}</em>
+      hack: Hack!!
+    step2:
+      title: "De Hackature - Stap 2"
+      explanation_html: |
+        Proficiat! Deze uitdaging is wat moeilijker. Nu gaan we je het wachtwoord niet geven!
+      hack: Hack!!
+    step3:
+      title: "De Hackature - Stap 3"
+      explanation_html: |
+        Goed gedaan, we zijn benieuwd of je deze ook vindt. Deze keer zal je het wachtwoord niet in de HTML vinden!
+      hack: Hack!
+    fake_step4:
+      title: "De Hackature - Stap 4"
+      explanation_html: |
+        <strong>Nice try</strong>, maar dit is niet de echte stap 4. Nu moet je terug van start beginnen!
+    step4:
+      title: "De Hackature - Stap Delta!"
+      explanation_html: |
+        OK, je bent goed bezig. Deze zou een makkie moeten zijn!
+    step5:
+      title: "De Hackature - Stap 42.."
+      explanation_html: |
+        Yes! Op naar de volgende stap!";--
+      hack: Hack!
+    step6:
+      title: "De Hackature - Bijna op het einde"
+      explanation_html:
+        Het wachtwoord dat je nodig hebt is %{password}!
+      hack: Hackk
