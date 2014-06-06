@@ -36,6 +36,9 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/sys
 
 set :rbenv_ruby, "2.1.1"
 
+set :unicorn_config_path, -> { File.join(current_path, "config", "unicorn.rb") }
+set :unicorn_rack_env, 'production'
+
 namespace :deploy do
 
   desc 'Restart application'
