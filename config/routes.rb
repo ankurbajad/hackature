@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get "/start" => 'steps#step1', as: :step1
   post "/start" => 'passwords#verify', defaults: {step: 1}
 

@@ -46,3 +46,6 @@ end
 
 gem 'simple_form'
 gem 'carrierwave'
+
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
