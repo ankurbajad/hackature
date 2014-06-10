@@ -9,6 +9,8 @@ listen 8052
 worker_processes 4
 timeout 30
 
+preload_app true
+
 # Force the bundler gemfile environment variable to
 # reference the capistrano "current" symlink
 before_exec do |_|
