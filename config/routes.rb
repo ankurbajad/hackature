@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   post "/there-will-be-cake" => 'steps#step6'
 
   get "/there-is-no-cake" => 'steps#step7', as: :step7
-  post "/there-is-no-cake" => 'password#verify', defaults: {step: 7}
+  post "/there-is-no-cake" => 'passwords#verify', defaults: {step: 7}
 
   get "/here-is-your-cake" => 'steps#finish', as: :finish
 

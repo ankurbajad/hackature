@@ -36,4 +36,10 @@ class StepsController < ApplicationController
       flash[:error] = "Expected X-Password header to equal password"
     end
   end
+
+  def step7
+  end
+
+  def finish
+  end
 end
