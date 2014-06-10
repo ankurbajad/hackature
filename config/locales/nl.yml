@@ -40,6 +40,11 @@ nl:
         Voor dit wachtwoord zal je even werk hebben. Zoals je misschien wel weet werkt de Q-Website met websockets. Het
         wachtwoord dat je nodig hebt voor deze stap vind je terug in onze websocket server. <em>Tip: check de entiteit "hackature"</em>
       hack: Hack!1!
+    step8:
+      title: "De Hackature - Secured"
+      explanation_html: |
+        Het wachtwoord voor deze stap is redelijk eenvoudig te achterhalen, het is namelijk de private key van ons SSL certificaat! Succes!
+      hack: Hack?!?
     finish:
       title: "De Hackature - The End!"
       explanation_html: |

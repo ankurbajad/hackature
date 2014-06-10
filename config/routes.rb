@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   get "/there-is-no-cake" => 'steps#step7', as: :step7
   post "/there-is-no-cake" => 'passwords#verify', defaults: {step: 7}
 
+  get "/secure-step" => 'steps#step8', as: :step8
+  post "/secure-step" => "passwords#verify", defaults: {step: 8}
+
   get "/here-is-your-cake" => 'steps#finish', as: :finish
 
   root to: redirect('/start')

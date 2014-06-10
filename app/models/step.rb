@@ -31,6 +31,10 @@ class Step
       url:      -> { step7_path }
     },
     {
+      password: -> (password) { password.split().join =~ %r{2Tk0Erl5riWB5B2IEJpBssGDYRBRDDdB/QjRcNyaaMyq5F4h7QMXff0Iun9AH8i5} },
+      url:      -> { step8_url(protocol: 'https', host: 'hackature.nl') }
+    },
+    {
       url:      -> { finish_path }
     }
   ]
@@ -61,6 +65,10 @@ class Step
   end
 
   def verify(password)
-    password == self.password
+    if self.password.respond_to?(:call)
+      self.password.call(password)
+    else
+      password == self.password
+    end
   end
 end
