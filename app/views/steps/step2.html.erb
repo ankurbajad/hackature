@@ -7,6 +7,8 @@
 
   <%= submit_tag t('.hack'), disabled: true, id: 'submit' %>
 <% end %>
+
+<% content_for(:end) do %>
 <%= (" " * 600 + "\n") * 20 %>
 <!-- WTF!! Wat is dit lang... -->
 <%= (" " * 600 + "\n") * 20 %>
@@ -15,3 +17,4 @@
 <!-- This is not the scrolling you are looking for -->
 <%= (" " * 600 + "\n") * 20 %>
 <script>$(document).on('change', '#p4ssw0rd', function () { if ($(this).val() == "<%= @password %>") { $('#submit').attr('disabled', false)} })</script>
+<% end %>
