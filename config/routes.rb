@@ -31,8 +31,8 @@ Rails.application.routes.draw do
 
   get "/here-is-your-cake" => 'steps#finish', as: :finish
 
-  get "/404.html" => 'errors#error_404'
-  get "/500.html" => 'errors#error_500'
+  get "/404" => 'errors#error_404'
+  get "/500" => 'errors#error_500'
 
   root to: redirect('/start')
 end
