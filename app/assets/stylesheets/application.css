@@ -22,3 +22,16 @@ html, input {
     width: 800px;
     margin: 0 auto;
 }
+
+#candidature label {
+    display: block;
+}
+
+#candidature input, #candidature textarea {
+    margin-bottom: 1em;
+    width: 400px;
+}
+
+#candidature input[type=text], #candidature textarea {
+    border: 1px solid #AAA;
+}

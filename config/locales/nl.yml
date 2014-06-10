@@ -1,12 +1,22 @@
 nl:
+  helpers:
+    submit:
+      candidature:
+        create: "Versturen"
+  simple_form:
+    labels:
+      candidature:
+        name: Naam
+        motivation: Korte motivatietekst
+        resume: Upload je CV (PDF)
+
   layouts:
     application:
       give_up_html: |
         <h3>Heb je er genoeg van?</h3>
         <p>
           Heb je gedaan wat je kon, maar je geraakt niet naar de volgende stap? Geen probleem, onze nerds hebben het
-          expres zo moeilijk gemaakt. Je kan een solicitatie-mail met motivatie sturen naar
-          <a href="mailto:%{code}@hackature.nl">%{code}@hackature.nl</a>, dan weten wij meteen welk vlees we in de kuip hebben!
+          expres zo moeilijk gemaakt. Je kan nu <a href="#{link}">hier</a> al solliciteren voor de job.
         </p>
   errors:
     error_404:
@@ -17,6 +27,15 @@ nl:
       title: "Hackature - !?!?!1?"
       explanation_html: |
         OK. Je hebt het kapot gemaakt. Goed gedaan, maar zo gaan we er niet geraken.. Probeer opnieuw!
+  candidatures:
+    new:
+      title: "OK, je wil een job..."
+      explanation_html: |
+        We hebben volgende gegevens van je nodig:
+    received:
+      title: "Je CV is goed ontvangen!"
+      explanation_html: |
+        We hebben je gegevens correct ontvangen. Don't call us, we'll call you!
   steps:
     step1:
       title: "De Hackature"

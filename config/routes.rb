@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'errors/error_404'
-
-  get 'errors/error_500'
-
   get "/start" => 'steps#step1', as: :step1
   post "/start" => 'passwords#verify', defaults: {step: 1}
 
@@ -30,6 +26,11 @@ Rails.application.routes.draw do
   post "/secure-step" => "passwords#verify", defaults: {step: 8}
 
   get "/here-is-your-cake" => 'steps#finish', as: :finish
+
+  get "/ok-ik-wil-een-job" => 'candidatures#new'
+  post "/ok-ik-wil-een-job" => 'candidatures#create', as: :candidatures
+
+  get "/sollicitatie-ontvangen" => 'candidatures#received', as: :received_candidatures
 
   get "/404" => 'errors#error_404'
   get "/500" => 'errors#error_500'

@@ -1,0 +1,13 @@
+<h1><%= t('.title') %></h1>
+
+<p><%= t('.explanation_html') %></p>
+
+<div id="candidature">
+  <%= simple_form_for @candidature do |f| %>
+    <%= f.input :name %>
+    <%= f.input :motivation, input_html: {rows: 16} %>
+    <%= f.input :resume %>
+
+    <%= f.button :submit %>
+  <% end %>
+</div>
