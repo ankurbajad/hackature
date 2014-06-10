@@ -12,7 +12,7 @@
 <div id="content">
   <%= yield %>
 
-  <% unless @step.first? || @step.last? %>
+  <% unless !@step || @step.first? || @step.last? %>
     <footer id="no-shame">
       <%= t('.give_up_html', code: @step.exit_code) %>
     </footer>

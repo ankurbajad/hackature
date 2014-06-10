@@ -8,6 +8,15 @@ nl:
           expres zo moeilijk gemaakt. Je kan een solicitatie-mail met motivatie sturen naar
           <a href="mailto:%{code}@hackature.nl">%{code}@hackature.nl</a>, dan weten wij meteen welk vlees we in de kuip hebben!
         </p>
+  errors:
+    error_404:
+      title: "Hackature - Huh?"
+      explanation_html: |
+        Dit is in ieder geval niet de pagina die je zoekt. Toch goed geprobeerd!
+    error_500:
+      title: "Hackature - !?!?!1?"
+      explanation_html: |
+        OK. Je hebt het kapot gemaakt. Goed gedaan, maar zo gaan we er niet geraken.. Probeer opnieuw!
   steps:
     step1:
       title: "De Hackature"

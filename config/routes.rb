@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'errors/error_404'
+
+  get 'errors/error_500'
+
   get "/start" => 'steps#step1', as: :step1
   post "/start" => 'passwords#verify', defaults: {step: 1}
 
@@ -26,6 +30,9 @@ Rails.application.routes.draw do
   post "/secure-step" => "passwords#verify", defaults: {step: 8}
 
   get "/here-is-your-cake" => 'steps#finish', as: :finish
+
+  get "/404.html" => 'errors#error_404'
+  get "/500.html" => 'errors#error_500'
 
   root to: redirect('/start')
 end
