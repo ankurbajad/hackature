@@ -15,8 +15,8 @@ nl:
       give_up_html: |
         <h3>Heb je er genoeg van?</h3>
         <p>
-          Heb je gedaan wat je kon, maar je geraakt niet naar de volgende stap? Geen probleem, onze nerds hebben het
-          expres zo moeilijk gemaakt. Je kan nu <a href="%{link}">hier</a> al solliciteren voor de job.
+          Heb je gedaan wat je kon, maar je komt niet bij de volgende stap? Geen probleem, onze nerds hebben het
+          expres zo moeilijk gemaakt. Je kan nu <a href="%{link}">hier</a> al solliciteren voor de job, dan weten wij meteen welk vlees we in de kuip hebben!
         </p>
   errors:
     error_404:
@@ -40,13 +40,13 @@ nl:
     step1:
       title: "De Hackature"
       explanation_html: |
-        Hier begint de Hackature. Om je een duwtje in de rug te geven heb je hier meteen het paswoord dat je nodig hebt
-        om naar de volgende stap te gaan! Het paswoord is <em>%{password}</em>
+        Hier begint de Hackature. Om je een duwtje in de rug te geven heb je hier meteen het wachtwoord dat je nodig hebt
+        om naar de volgende stap te gaan! Het wachtwoord is <em>%{password}</em>
       hack: Hack!!
     step2:
       title: "De Hackature - Stap 2"
       explanation_html: |
-        Proficiat! Deze uitdaging is wat moeilijker. Nu gaan we je het wachtwoord niet geven!
+        Gefeliciteerd! Deze uitdaging is wat moeilijker. Nu gaan we je het wachtwoord niet geven!
       hack: Hack!!
     step3:
       title: "De Hackature - Stap 3"
@@ -60,7 +60,7 @@ nl:
     step4:
       title: "De Hackature - Stap Delta!"
       explanation_html: |
-        OK, je bent goed bezig. Deze zou een makkie moeten zijn!
+        Okay, je bent goed bezig. Deze zou een makkie moeten zijn!
     step5:
       title: "De Hackature - Stap 42.."
       explanation_html: |
@@ -74,8 +74,8 @@ nl:
     step7:
       title: "De Hackature - Stap i"
       explanation_html: |
-        Voor dit wachtwoord zal je even werk hebben. Zoals je misschien wel weet werkt de Q-Website met websockets. Het
-        wachtwoord dat je nodig hebt voor deze stap vind je terug in onze websocket server. <em>Tip: check de entiteit "hackature"</em>
+        Voor dit wachtwoord moet je echt even goed zoeken. Zoals je misschien wel weet, werkt de Q-website met websockets.
+        Het wachtwoord dat je nodig hebt voor deze stap vind je terug in onze websocket server. <em>Tip: check de entiteit "hackature"</em>
       hack: Hack!1!
     step8:
       title: "De Hackature - Secured"
@@ -85,5 +85,5 @@ nl:
     finish:
       title: "De Hackature - The End!"
       explanation_html: |
-        Oei, we hadden niet verwacht dat iemand hier zou geraken! Proficiat! Je bent slimmer dan onze nerds! Nu willen wij van je horen!
+        Wow! We hadden niet verwacht dat iemand hier zou komen! Proficiat! Je bent slimmer dan onze nerds! Nu willen wij wel meer van je weten!
         Je kan <a href="%{link}">hier</a> solliciteren voor de job.
