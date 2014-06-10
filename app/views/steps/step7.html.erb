@@ -1,3 +1,7 @@
+<% content_for :head do %>
+  <script type="text/javascript" src="//socket.q-music.nl/js/q+sock.js"></script>
+<% end %>
+
 <h1><%= t('.title') %></h1>
 
 <p><%= t('.explanation_html', password: @password) %></p>
