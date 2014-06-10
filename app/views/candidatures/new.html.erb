@@ -5,6 +5,7 @@
 <div id="candidature">
   <%= simple_form_for @candidature do |f| %>
     <%= f.input :name %>
+    <%= f.input :email %>
     <%= f.input :motivation, input_html: {rows: 16} %>
     <%= f.input :resume %>
 
