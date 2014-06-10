@@ -1,4 +1,13 @@
 nl:
+  layouts:
+    application:
+      give_up_html: |
+        <h3>Heb je er genoeg van?</h3>
+        <p>
+          Heb je gedaan wat je kon, maar je geraakt niet naar de volgende stap? Geen probleem, onze nerds hebben het
+          expres zo moeilijk gemaakt. Je kan een solicitatie-mail met motivatie sturen naar
+          <a href="mailto:%{code}@hackature.nl">%{code}@hackature.nl</a>, dan weten wij meteen welk vlees we in de kuip hebben!
+        </p>
   steps:
     step1:
       title: "De Hackature"

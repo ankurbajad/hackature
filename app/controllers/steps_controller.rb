@@ -1,19 +1,23 @@
 class StepsController < ApplicationController
   def step1
-    @password = Step.for(1).password
+    @step = Step.for(1)
+    @password = @step.password
   end
 
   def step2
-    @password = Step.for(2).password
+    @step = Step.for(2)
+    @password = @step.password
   end
 
   def step3
-    @password = Step.for(3).password
+    @step = Step.for(3)
+    @password = @step.password
     headers['X-S3cr3t-P4ssw0rd'] = @password
   end
 
   def step4
-    @password = Step.for(4).password
+    @step = Step.for(4)
+    @password = @step.password
   end
 
   def step5
@@ -38,6 +42,11 @@ class StepsController < ApplicationController
   end
 
   def step7
+    @step = Step.for(7)
+  end
+
+  def step8
+    @step = Step.for(8)
   end
 
   def finish
