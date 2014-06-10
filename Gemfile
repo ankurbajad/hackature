@@ -36,6 +36,9 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
+
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Use debugger

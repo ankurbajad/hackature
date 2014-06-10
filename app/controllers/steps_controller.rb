@@ -1,37 +1,36 @@
 class StepsController < ApplicationController
+  before_filter :set_current_step
+  # Disabled because it's possible to solve this problems in different browsers
+  # before_filter :ensure_step_order
+  after_filter :save_current_step
+
   def step1
-    @step = Step.for(1)
     @password = @step.password
   end
 
   def step2
-    @step = Step.for(2)
     @password = @step.password
   end
 
   def step3
-    @step = Step.for(3)
     @password = @step.password
     headers['X-S3cr3t-P4ssw0rd'] = @password
   end
 
   def step4
-    @step = Step.for(4)
     @password = @step.password
   end
 
   def step5
-    @step = Step.for(5)
     if @step.verify(params[:passw0rd])
       redirect_to @step.next.url
     end
 
-    @password = Step.for(5).password
+    @password = @step.password
     headers['X-Hint'] = "http://xkcd.com/327"
   end
 
   def step6
-    @step = Step.for(6)
     @password = @step.password
 
     if @step.verify(request.headers['X-Password'])
@@ -42,14 +41,37 @@ class StepsController < ApplicationController
   end
 
   def step7
-    @step = Step.for(7)
   end
 
   def step8
-    @step = Step.for(8)
   end
 
   def finish
-    @step = Step.finish
+  end
+  
+  private
+  def ensure_step_order
+    unless @step.first?
+      visited_steps = cookies.encrypted[:steps]
+
+      if !visited_steps || visited_steps.blank? # No cookie? Go to step 1
+        redirect_to(Step.for(1).url)
+      elsif visited_steps.last < @step.idx - 1
+        redirect_to(Step.for(visited_steps.last).url)
+      end
+    end
+  end
+
+  def save_current_step
+    return if @stop
+
+    steps = cookies.encrypted[:steps] || []
+    steps << @step.idx
+    cookies.encrypted[:steps] = steps
+  end
+
+  def set_current_step
+    step_idx = params[:action].to_s[/step(\d+)/, 1]
+    @step = step_idx ? Step.for(step_idx) : Step.finish
   end
 end

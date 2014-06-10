@@ -58,6 +58,8 @@ class Step
     end
   end
 
+  attr_accessor :idx
+
   def initialize(attrs, idx)
     @attrs = attrs
     @idx = idx
