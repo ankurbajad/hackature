@@ -50,5 +50,6 @@ class StepsController < ApplicationController
   end
 
   def finish
+    @step = Step.finish
   end
 end

@@ -52,6 +52,10 @@ class Step
       idx = step.to_i - 1
       new(Steps[idx], step.to_i)
     end
+
+    def finish
+      new(Steps.last, Steps.count)
+    end
   end
 
   def initialize(attrs, idx)

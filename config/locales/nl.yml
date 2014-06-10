@@ -57,4 +57,5 @@ nl:
     finish:
       title: "De Hackature - The End!"
       explanation_html: |
-        Proficiat! Je hebt het gehaald, je bent een echte hacker!
+        Oei, we hadden niet verwacht dat iemand hier zou geraken! Proficiat! Je bent slimmer dan onze nerds! Nu willen wij van je horen!
+        Je kan een solicitatie-mail met motivatie sturen naar <a href="mailto:%{code}@hackature.nl">%{code}@hackature.nl</a>
