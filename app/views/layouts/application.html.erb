@@ -14,7 +14,7 @@
 
   <% unless !@step || @step.first? || @step.last? %>
     <footer id="no-shame">
-      <%= t('.give_up_html', code: @step.exit_code) %>
+      <%= t('.give_up_html', link: new_candidature_path) %>
     </footer>
   <% end %>
 </div>

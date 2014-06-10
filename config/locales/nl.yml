@@ -16,7 +16,7 @@ nl:
         <h3>Heb je er genoeg van?</h3>
         <p>
           Heb je gedaan wat je kon, maar je geraakt niet naar de volgende stap? Geen probleem, onze nerds hebben het
-          expres zo moeilijk gemaakt. Je kan nu <a href="#{link}">hier</a> al solliciteren voor de job.
+          expres zo moeilijk gemaakt. Je kan nu <a href="%{link}">hier</a> al solliciteren voor de job.
         </p>
   errors:
     error_404:
@@ -86,4 +86,4 @@ nl:
       title: "De Hackature - The End!"
       explanation_html: |
         Oei, we hadden niet verwacht dat iemand hier zou geraken! Proficiat! Je bent slimmer dan onze nerds! Nu willen wij van je horen!
-        Je kan een solicitatie-mail met motivatie sturen naar <a href="mailto:%{code}@hackature.nl">%{code}@hackature.nl</a>
+        Je kan <a href="%{link}">hier</a> solliciteren voor de job.

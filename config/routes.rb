@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   get "/here-is-your-cake" => 'steps#finish', as: :finish
 
-  get "/ok-ik-wil-een-job" => 'candidatures#new'
+  get "/ok-ik-wil-een-job" => 'candidatures#new', as: :new_candidature
   post "/ok-ik-wil-een-job" => 'candidatures#create', as: :candidatures
 
   get "/sollicitatie-ontvangen" => 'candidatures#received', as: :received_candidatures
