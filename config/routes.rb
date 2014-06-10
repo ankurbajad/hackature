@@ -16,11 +16,13 @@ Rails.application.routes.draw do
   get "/step_42" => 'steps#step5', as: :step5
   post "/step_42" => 'steps#step5'
 
-  get "/bijna-het-einde" => 'steps#step6', as: :step6
-  post "/bijna-het-einde" => 'steps#step6'
+  get "/there-will-be-cake" => 'steps#step6', as: :step6
+  post "/there-will-be-cake" => 'steps#step6'
 
-  get "/maar-nog-niet-helemaal" => 'steps#step7', as: :step7
-  post "/maar-nog-niet-helemaal" => 'password#verify', defaults: {step: 7}
+  get "/there-is-no-cake" => 'steps#step7', as: :step7
+  post "/there-is-no-cake" => 'password#verify', defaults: {step: 7}
+
+  get "/here-is-your-cake" => 'steps#finish', as: :finish
 
   root to: redirect('/start')
 end

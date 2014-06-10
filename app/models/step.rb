@@ -29,6 +29,9 @@ class Step
     {
       password: 'WebSocketsAreCool',
       url:      -> { step7_path }
+    },
+    {
+      url:      -> { finish_path }
     }
   ]
 
