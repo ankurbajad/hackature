@@ -8,7 +8,7 @@
 <% end %>
 
 <% case params[:passw0rd] %>
-<% when /['"].*SELECT.*;--/ %>
+<% when /['"].*SELECT.*;--/i %>
   <pre>
   | steps | passwords        |
   | 42    | <%= @password %> |
