@@ -16,5 +16,18 @@
 <%= (" " * 600 + "\n") * 20 %>
 <!-- This is not the scrolling you are looking for -->
 <%= (" " * 600 + "\n") * 20 %>
-<script>$(document).on('change', '#p4ssw0rd', function () { if ($(this).val() == "<%= @password %>") { $('#submit').attr('disabled', false)} })</script>
+<script>
+  (function(q, _, m, u, s, i, c, $) {
+    u = arguments.length * u
+    s = '#'
+    c = 'submit'
+    $ = ['ThisIsThePassword', 'DitIsHetWachtwoord', 'OfIsHetDit', 'HetBlijftEenvoudig', 'HetWordAlWatMoeilijker', 'SecurityByObscurity', 'OKHetKomtGoed', 'JeBentEenEchteHacker', 'GoedGedaan', 'Volgende', '<%= @password %>', 'AlleGekheidOpEenStokje', 'WeGaanGemakkelijkVanStart', 'Moop3ahXahghuc7aemai7piucheXah2m', 'DitIsGeheim']
+    var password = s + 'p4ssw0r' + (("" + i)[u++])
+    m != undefined ? i = function (i) { return $[i] } : function () { "RealPassword" }
+
+    q.i = function () { m(s+c).attr('disabled', false) }
+    q._ = function () { if (m(this).val() == i(++u)) q.i(); else window.location = "/start" }
+    m(_).on('change', password, q._)
+  })(window, document, $, 2)
+</script>
 <% end %>
