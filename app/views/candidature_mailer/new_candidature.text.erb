@@ -6,3 +6,5 @@ Telefoon:   <%= @candidature.phone_number %>
 Motivatie:
 
   <%= @candidature.motivation %>
+
+Details: <%= polymorphic_path([:admin, @candidature], only_path: false) %>
