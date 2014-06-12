@@ -8,7 +8,7 @@ class CandidatureMailer < ActionMailer::Base
       attachments[@candidature.resume.filename] = @candidature.resume.file.read
     end
 
-    mail to: "pz@q-music.nl",
+    mail to: ["pz@q-music.nl", "dimitri.vanheucke@medialaan.be"],
          reply_to: @candidature.email
   end
 end
