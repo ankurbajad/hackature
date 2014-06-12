@@ -18,6 +18,6 @@ class CandidaturesController < ApplicationController
 
   private
   def candidature_params
-    params.require(:candidature).permit(:name, :resume, :motivation)
+    params.require(:candidature).permit(:name, :email, :phone_number, :resume, :motivation)
   end
 end
