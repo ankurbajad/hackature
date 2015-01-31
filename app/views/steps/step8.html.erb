@@ -1,8 +1,12 @@
+<% content_for :head do %>
+  <script type="text/javascript" src="//socket.q-music.nl/js/q+sock.js"></script>
+<% end %>
+
 <h1><%= t('.title') %></h1>
 
-<p><%= t('.explanation_html') %></p>
+<p><%= t('.explanation_html', password: @password) %></p>
 
 <%= form_tag do %>
-  <%= text_area_tag("passw0rd", '', id: 'p4ssw0rd', rows: 12, cols: 40) %>
+  <%= password_field_tag("passw0rd", '', id: 'p4ssw0rd') %>
   <%= submit_tag t('.hack') %>
 <% end %>

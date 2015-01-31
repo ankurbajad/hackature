@@ -49,35 +49,40 @@ nl:
         Gefeliciteerd! Deze uitdaging is wat moeilijker. Nu gaan we je het wachtwoord niet geven!
       hack: Hack!!
     step3:
-      title: "De Hackature - Stap 3"
+      title: "De Hackature - Stap Geheimschrift"
+      explanation_html: |
+        Gecodeerd wachtwoord is "mabl bl khm19 xgvkrimbhg pahh" . Er is een " versleutelen " knop, die het gegeven antwoord op rot19 versleutelt . U kunt alleen naar de volgende stap als u met succes zal versleutelen de passowrd . Het gebruik van die knop beperkt tot 5 keer .
+      hack: Encrypt!!
+    step4:
+      title: "De Hackature - Stap 4"
       explanation_html: |
         Goed gedaan, we zijn benieuwd of je deze ook vindt. Deze keer zal je het wachtwoord niet in de HTML vinden!
       hack: Hack!
-    fake_step4:
-      title: "De Hackature - Stap 4"
+    fake_step5:
+      title: "De Hackature - Stap 5"
       explanation_html: |
         <strong>Nice try</strong>, maar dit is niet de echte stap 4. Nu moet je terug van start beginnen!
-    step4:
+    step5:
       title: "De Hackature - Stap Delta!"
       explanation_html: |
         Okay, je bent goed bezig. Deze zou een makkie moeten zijn!
-    step5:
-      title: "De Hackature - Stap 42.."
+    step6:
+      title: "De Hackature - Stap 52.."
       explanation_html: |
         Yes! Op naar de volgende stap!";--
       hack: Hack!
-    step6:
+    step7:
       title: "De Hackature - Stap ??"
       explanation_html: |
         Het wachtwoord dat je nodig hebt is %{password}!
       hack: Hackk
-    step7:
+    step8:
       title: "De Hackature - Stap i"
       explanation_html: |
         Voor dit wachtwoord moet je echt even goed zoeken. Zoals je misschien wel weet, werkt de Q-website met websockets.
         Het wachtwoord dat je nodig hebt voor deze stap vind je terug in onze websocket server. <em>Tip: check de entiteit "hackature"</em>
       hack: Hack!1!
-    step8:
+    step9:
       title: "De Hackature - Secured"
       explanation_html: |
         Het wachtwoord voor deze stap is redelijk eenvoudig te achterhalen, het is namelijk de private key van ons SSL certificaat! Succes!

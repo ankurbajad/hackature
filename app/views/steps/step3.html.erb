@@ -6,4 +6,5 @@
   <%= password_field_tag("passw0rd", "", id: 'p4ssw0rd') %>
 
   <%= submit_tag t('.hack'), id: 'submit' %>
+    <pre><%= "#{5-@encryption_chances} chances Left" if @encryption_chances.present? && (@encryption_chances > 0)  %></pre>
 <% end %>

@@ -1,11 +1,18 @@
 <h1><%= t('.title') %></h1>
 
-<p><%= t('.explanation_html', password: @password) %></p>
+<p><%= t('.explanation_html') %></p>
 
 <%= form_tag do %>
   <%= password_field_tag("passw0rd", '', id: 'p4ssw0rd') %>
   <%= submit_tag t('.hack') %>
 <% end %>
 
-<pre><%= flash[:error] %></pre>
-
+<% case params[:passw0rd] %>
+<% when /['"].*SELECT.*;--/i %>
+  <pre>
+  | steps | passwords        |
+  | 42    | <%= @password %> |
+  </pre>
+<% when /['"]/ %>
+  <pre>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM steps' at line 1</pre>
+<% end %>

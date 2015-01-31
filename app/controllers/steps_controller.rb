@@ -5,6 +5,7 @@ class StepsController < ApplicationController
   after_filter :save_current_step
 
   def step1
+    session[:encrypt] = 0
     @password = @step.password
   end
 
@@ -14,14 +15,23 @@ class StepsController < ApplicationController
 
   def step3
     @password = @step.password
-    headers['X-S3cr3t-P4ssw0rd'] = @password
+    if params[:passw0rd] && @step.verify(params[:passw0rd].rot19)
+      redirect_to @step.next.url
+    else 
+      @encryption_chances = encryption_chances if params[:passw0rd]
+    end
   end
 
   def step4
     @password = @step.password
+    headers['X-S3cr3t-P4ssw0rd'] = @password
   end
 
   def step5
+    @password = @step.password
+  end
+
+  def step6
     if @step.verify(params[:passw0rd])
       redirect_to @step.next.url
     end
@@ -30,7 +40,7 @@ class StepsController < ApplicationController
     headers['X-Hint'] = "http://xkcd.com/327"
   end
 
-  def step6
+  def step7
     @password = @step.password
 
     if @step.verify(request.headers['X-Password'])
@@ -40,10 +50,10 @@ class StepsController < ApplicationController
     end
   end
 
-  def step7
+  def step8
   end
 
-  def step8
+  def step9
   end
 
   def finish
@@ -74,4 +84,9 @@ class StepsController < ApplicationController
     step_idx = params[:action].to_s[/step(\d+)/, 1]
     @step = step_idx ? Step.for(step_idx) : Step.finish
   end
+
+  def encryption_chances   
+    session[:encrypt] = session[:encrypt].present? ? (session[:encrypt] + 1) : 1
+    session[:encrypt] == 5 ? (redirect_to step1_path) : session[:encrypt]
+  end 
 end
